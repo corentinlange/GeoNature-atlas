@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-07-30 16:52+0200\n"
+"POT-Creation-Date: 2021-08-03 10:10+0200\n"
 "PO-Revision-Date: 2021-07-19 09:53+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: fr\n"
@@ -17,6 +17,15 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.9.1\n"
+
+#: static/custom/templates/introduction.html:6
+msgid "welcome.message"
+msgstr "Bienvenue sur l'atlas de la faune et de la flore"
+
+#: static/custom/templates/introduction.html:11
+#: templates/specieSheet/blocInfos.html:17
+msgid "read.more"
+msgstr "En savoir plus"
 
 #: static/custom/templates/presentation.html:11
 msgid "My custom presentation"
@@ -226,10 +235,6 @@ msgstr "Informations espèce"
 #: templates/specieSheet/otherInformations.html:57
 msgid "description"
 msgstr "Description"
-
-#: templates/specieSheet/blocInfos.html:17
-msgid "read.more"
-msgstr "En savoir plus"
 
 #: templates/specieSheet/blocInfos.html:19
 msgid "environment"

@@ -43,3 +43,17 @@ $('.collapse').on('show.bs.collapse', function () {
     $('.collapse.in').collapse('hide');
 });
 
+// Glossarizer JQUERY utilisé dans la bloc d'infos de la fiche espèce (si paramètre GLOSSAIRE activé)
+if (configuration.GLOSSAIRE) {
+	$(function() {
+	  $("#blocInfos").glossarizer({
+		sourceURL:
+		  configuration.URL_APPLICATION + "/static/custom/glossary.json",
+		callback: function() {
+		  // Callback fired after glossarizer finishes its job
+		  new tooltip();
+		}
+	  });
+	});
+  }
+  

@@ -122,7 +122,8 @@ ZOOM_LEVEL_POINT = 11
 LIMIT_CLUSTER_POINT = 1000
 
 # Carte de la page d'accueil: observations des 'x' derniers jours. Bien mettre en anglais et non accordé
-NB_DAY_LAST_OBS = '7'
+NB_DAY_LAST_OBS =7
+
 # Texte à afficher pour décrire la cartographie des 'dernières observations'
 TEXT_LAST_OBS = 'Les observations des agents ces 7 derniers jours |'
 
@@ -238,7 +239,7 @@ PATRIMONIALITE = {
 CUSTOM_LOGO_LINK='https://monadressecustom.org'
 
 #############################
-#### Pages statistiques #####
+###### Pages statiques ######
 #############################
 
 # Permet de lister les pages statiques souhaitées et de les afficher dynamiquement dans le menu sidebar

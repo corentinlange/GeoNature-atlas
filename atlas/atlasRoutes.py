@@ -134,7 +134,7 @@ def index():
             current_app.logger.debug("start AFFICHAGE_MAILLE")
             observations = vmObservationsMaillesRepository.lastObservationsMailles(
                 connection,
-                current_app.config["NB_DAY_LAST_OBS"],
+                str(current_app.config["NB_DAY_LAST_OBS"]) + ' day',
                 current_app.config["ATTR_MAIN_PHOTO"],
             )
             current_app.logger.debug("end AFFICHAGE_MAILLE")
@@ -142,7 +142,7 @@ def index():
             current_app.logger.debug("start AFFICHAGE_PRECIS")
             observations = vmObservationsRepository.lastObservations(
                 connection,
-                current_app.config["NB_DAY_LAST_OBS"],
+                str(current_app.config["NB_DAY_LAST_OBS"]) + ' day',
                 current_app.config["ATTR_MAIN_PHOTO"],
             )
             current_app.logger.debug("end AFFICHAGE_PRECIS")
@@ -171,6 +171,8 @@ def index():
 
     connection.close()
     session.close()
+
+    print(observations)
 
     return render_template(
         "templates/home/_main.html",

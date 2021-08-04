@@ -357,9 +357,10 @@ then
     sudo -u postgres -s psql -d $db_name -c "ALTER FUNCTION atlas.create_vm_altitudes() OWNER TO "$owner_atlas";"
     sudo -u postgres -s psql -d $db_name -c "ALTER FUNCTION atlas.find_all_taxons_childs(integer) OWNER TO "$owner_atlas";"
 
+
     echo "Creation de la VM des observations de chaque taxon par mailles..."
     # Création de la vue matérialisée vm_mailles_observations (nombre d'observations par maille et par taxon)
-    sudo -n -u postgres -s psql -d $db_name -f data/observations_mailles.sql  &>> log/install_db.log
+    export PGPASSWORD=$owner_atlas_pass;psql -U $owner_atlas -h $db_host -d $db_name -f data/observations_mailles.sql  &>> log/install_db.log
     sudo -n -u postgres -s psql -d $db_name -c "ALTER TABLE atlas.vm_observations_mailles OWNER TO "$owner_atlas";"
 
     # Affectation de droits en lecture sur les VM à l'utilisateur de l'application ($user_pg)
